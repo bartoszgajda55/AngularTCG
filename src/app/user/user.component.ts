@@ -12,12 +12,11 @@ export class UserComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.params
-      .subscribe(
-        (params: Params) => {
-          this.id = +params['id'];
-        }
-      );
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.id = +params['id'];
+      }
+    );
   }
 
 }
