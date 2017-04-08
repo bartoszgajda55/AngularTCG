@@ -7,6 +7,7 @@ import {Observable} from "rxjs";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
   genders = ['male', 'female'];
   signupForm: FormGroup;
