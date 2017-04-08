@@ -33,10 +33,24 @@ export class AppComponent implements OnInit {
         console.log(status);
       }
     );
+    this.signupForm.setValue({
+      'userData': {
+        'username': 'Test',
+        'email': 'test@t.com'
+      },
+      'gender': 'male',
+      'hobbies': []
+    });
+    this.signupForm.patchValue({
+      'userData': {
+        'username': 'Test3',
+      }
+    });
   }
 
   onSubmit() {
     console.log(this.signupForm);
+    this.signupForm.reset();
   }
 
   onAddHobby() {
