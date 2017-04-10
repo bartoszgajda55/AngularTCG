@@ -31,4 +31,13 @@ export class ServerService {
         }
       );
   }
+
+  getAppName() {
+    return this.http.get('https://angulartcg.firebaseio.com/appName.json')
+      .map(
+        (response) => {
+          return response.json();
+        }
+      );
+  }
 }
