@@ -18,7 +18,11 @@ export class ServerService {
     return this.http.get('https://angulartcg.firebaseio.com/data.json')
       .map(
         (response) => {
-          return response.json();
+          const data = response.json();
+          for (const server of data) {
+            server.name = 'FETCHED_' + server.name;
+          }
+          return data;
         }
       );
   }
