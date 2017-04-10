@@ -6,6 +6,7 @@ import {ServerService} from "./server.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   appName = this.serverService.getAppName();
   servers = [
