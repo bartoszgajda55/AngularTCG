@@ -46,4 +46,16 @@ export class AppComponent {
       }
     );
   }
+
+  onGet() {
+    this.serverService.getServers().subscribe(
+      (response) => {
+        const data = response.json();
+        console.log(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 }
