@@ -9,7 +9,8 @@ export class ServerService {
 
   storeServers(servers: any[]) {
     const header = new Headers({'Content-Type': 'application/json'});
-    return this.http.post('https://angulartcg.firebaseio.com/data.json', servers, header);
+    // return this.http.post('https://angulartcg.firebaseio.com/data.json', servers, header);
+    return this.http.put('https://angulartcg.firebaseio.com/data.json', servers, header);
   }
 
   getServers() {
