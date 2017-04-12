@@ -99,6 +99,7 @@ import {animate, keyframes, state, style, transition, trigger} from "@angular/an
     ])
   ]
 })
+
 export class AppComponent {
   state = 'normal';
   wild = 'normal';
